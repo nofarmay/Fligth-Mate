@@ -1,0 +1,40 @@
+.fligthsupdatewrapper {
+    margin: 1rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #dddddddd;
+    max-width: 300px;
+    color: #333;
+    height: max-content;
+    min-height: 300px;
+}
+
+.flight-title {
+    color: #333;
+}
+
+.box-container {
+    display: flex;
+    border: 3px solid darkblue;
+    border-radius: 8px;
+}
+.box {
+    padding: 0.8rem 1.6rem;
+
+}
+
+box:first-child {
+    border-right: 3px solid darkblue;
+}
+
+.flights-time-container {
+    margin-top: 1.6rem;
+    display: flex;
+}
+
+.filght-details {
+    margin-top: 0.8rem;
+}
