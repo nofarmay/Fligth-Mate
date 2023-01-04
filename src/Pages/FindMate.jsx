@@ -1,22 +1,16 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import { Link } from "react-router-dom"
 import '../Pages/FindMate.css'
-import background from "../img/terminal.jpg"
 
-function FindMate({ setFilter,filter,setSearchvalue }) {
-    // const [searchvalue, setSearchvalue] = useState("")
-    const [passenger,setPassenger] = useState([])
-    const cityName = (e) => {
-        // setCity(e.target.value)
-    }
-  
+function FindMate({ setFilter,filter,setSearchvalue }) { 
+    // const [passenger,setPassenger] = useState([])
     const chosenCity = () => {
-        // setFilter(city);
-        
+        // setFilter(city);  
     }
     return (
         <> <div>
-            <div className='homewrapper' style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
+            <div className='homewrapper' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/img/terminal.jpg"
+})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
 
                 <div className='searchBox'>
                     <input className="form-control" placeholder="Enter value"
@@ -25,7 +19,7 @@ function FindMate({ setFilter,filter,setSearchvalue }) {
                         <select onChange={(e) => {setFilter(e.target.value)}}>
   <option value="">filter</option>
   <option value="name">name</option>
-  <option value="languae">language</option>
+  <option value="launguges">language</option>
   <option value="city">city</option>
   <option value="country">country</option>
   <option value="hobbies">hobbies</option>
@@ -42,10 +36,9 @@ function FindMate({ setFilter,filter,setSearchvalue }) {
             </div>
         </div>
         </>
-
     )
 }
-// TODO update it to mates and not houses
+
 export default FindMate;
 
 

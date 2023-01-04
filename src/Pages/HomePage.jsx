@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, {useState} from 'react'
 import { Link } from "react-router-dom"
 import './HomePage.css'
-import background from "../img/train.avif"
 
 function HomePage({ setFilter }) {
     const [city, setCity] = useState("")
@@ -18,13 +17,14 @@ function HomePage({ setFilter }) {
     return (
 
         <>
-            <div className='homewrapper' style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
+            <div className='homewrapper' style={{ backgroundImage: `url(${process.env.PUBLIC_URL + "/img/train.avif"
+})`, backgroundRepeat: "no-repeat", backgroundSize: "cover" }} >
                 <div className='slogen'><h2>Travel more with figth mate </h2></div>
                 <div className='des'><h3>search for your up coming fligth </h3></div>
                 <br></br>
                 <br></br>
                 <div className='searchBox'>
-                    <input className="form-control" placeholder="Enter your fligth number"
+                    <input className="form-control" placeholder="Enter your flight number"
                         role="combobox" onChange={cityName} />
                     <Link to="/Cards">
                         <button onClick={chosenCity}><span className="material-symbols-outlined">

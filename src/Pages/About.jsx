@@ -1,7 +1,17 @@
 import React from 'react'
 import "./About.css"
+import video from '../assets/video.mp4'
 export default function About() {
     return (
+        <div>
+               <div className='main'>
+        <div className="overlay"></div>
+        <video src={video} autoPlay loop muted />
+        <div className="content">
+            <h1>Welcome</h1>
+            <p>To my site.</p>
+        </div>
+    </div>
             <div className='aboutwrapper' >
          <h1>Flight Mate: How does it work ?</h1>
          {/* CHANGE NEXT LINE HERE AND IN THE CSS TO H2 */}
@@ -24,6 +34,7 @@ Whether you're reading, sleeping, or holding a conversation, Flight Mate's inter
 Contact Our Team Today
 <br />
 <button>get in touch</button>
+</div>
 </div>
 </div>
     )
